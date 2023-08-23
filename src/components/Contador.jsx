@@ -1,11 +1,13 @@
+import { useState } from "react"; // useState es un hook que pertenece a react que permite controlar los cambios de un objeto
+
 const Contador = () => {
-    let contador = 0;
+    // Para poder indicarle a react que renderice el resultado del incremento, se usa el hook useState
+    // Uso de destructory, se le pasa el valor por default a useState y se extrae el contador y el modificador
+    const [contador, setContador] = useState(0);
 
     const incrementar = () => {
-        contador++;
-
-        // El contador incrementa, pero no se renderiza si no hay algo que se lo indique a react
-        console.log(contador);
+        // Modificar el contador a través del modificador para que react sepa que debe renderizar al cambiar
+        setContador(contador + 1);
     };
 
     return (
