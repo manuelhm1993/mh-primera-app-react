@@ -48,6 +48,9 @@ const App = () => {
         );
     };
 
+    // Array común y corriente | Se enviará como propiedad al componente Fruta
+    const frutas = ['🍏', '🍓', '🍌', '🍒'];
+
     // Return del contenido de App
     return (
         <div className="container">
@@ -57,12 +60,8 @@ const App = () => {
             {/* Lógica condicional con el operador ternario */}
             {(user) ? <SaludoBienvenida /> : <SaludoDespedida />}
 
-            {/* Listas y keys */}
-            <Fruta />
-
-            {/* Reutilizar el componente */}
-            <Fruta />
-            <Fruta />
+            {/* Listas y keys - Las props son parámetros o data que se envía al componente nombre={valor} */}
+            <Fruta frutasProp={frutas} />
 
             {/* Llamar a un componente que está a la escucha de un evento */}
             <BotonClick />
