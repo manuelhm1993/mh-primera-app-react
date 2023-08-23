@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App'; // Componente principal que recibe el resto de componentes .js
 import reportWebVitals from './reportWebVitals';
+
+// Importaciones propias
+import AppJSX from './App.jsx'; //Se debe colocar la extensión si se usan .js y .jsx
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AppJSX />
   </React.StrictMode>
 );
 
