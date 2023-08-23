@@ -35,8 +35,10 @@ const App = () => {
             <ul>
                 {
                     // Se usa map ya que para que se pueda renderizar, es necesario el return, foreach no retorna
-                    frutas.map((fruta, i) => {
-                        return <li>{fruta}</li>;
+                    frutas.map((fruta, index) => {
+                        // Para el correcto renderizado de los elementos se debe ligar el elemento con un key único, como su index
+                        // En el caso de los arrays, no es recomendable si dicho array no es dinámico, porque los índices cambian
+                        return <li key={fruta}>{index + 1} - {fruta}</li>;
                     }) // Como se está operando dentro de las llaves de renderizado, no se finaliza con ';'
                 }
             </ul>
