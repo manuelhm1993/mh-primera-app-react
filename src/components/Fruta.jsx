@@ -2,8 +2,6 @@ import React from "react"; // En este caso si es necesario importar React
 
 // Todas las propiedades, parámetros, hijos se van a recibir en el objeto props
 const Fruta = (props) => {
-    console.log(props);
-    
     return (
         // Esta expresión es el React.Fragment resumido
         <>        

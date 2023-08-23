@@ -1,4 +1,5 @@
 // Llamar a los componentes
+import Contador from "./components/Contador";
 import Fruta from "./components/Fruta";
 
 const App = () => {
@@ -54,8 +55,11 @@ const App = () => {
     // Return del contenido de App
     return (
         <div className="container">
+            {/* Contador states y hooks */}
+            <Contador />
+
             {/* Atributos de clase y renderizado de variables */}
-            <h1 className={clasesColor.primary}>{saludo}</h1>
+            <h2 className={clasesColor.primary}>{saludo}</h2>
 
             {/* Lógica condicional con el operador ternario */}
             {(user) ? <SaludoBienvenida /> : <SaludoDespedida />}
