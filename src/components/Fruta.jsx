@@ -5,8 +5,8 @@ const Fruta = () => {
     const frutas = ['🍏', '🍓', '🍌', '🍒'];
 
     return (
-        // Para evitar usar un div adicional, se puede embeber todo dentro de las etiquetas React.Fragment
-        <React.Fragment>        
+        // Esta expresión es el React.Fragment resumido
+        <>        
             {/* Iterar un array con react, se hace exactamente igual que en blade */}
             <ul>
                 {
@@ -19,7 +19,7 @@ const Fruta = () => {
             </ul>
 
             <p>Lorem ipsum dolor sit amet.</p>
-        </React.Fragment>
+        </>
     )
 }
 

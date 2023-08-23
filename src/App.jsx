@@ -60,6 +60,10 @@ const App = () => {
             {/* Listas y keys */}
             <Fruta />
 
+            {/* Reutilizar el componente */}
+            <Fruta />
+            <Fruta />
+
             {/* Llamar a un componente que está a la escucha de un evento */}
             <BotonClick />
         </div>
