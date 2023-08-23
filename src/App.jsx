@@ -1,11 +1,15 @@
 const App = () => {
     const saludo = "Saludo desde constante. Dentro del componente principal.";
 
-    // Objeto para renderizar las clases de bootstrap
+    // Objetos para renderizar las clases de bootstrap
     const clasesColor = {
         primary: 'text-primary',
         success: 'text-success',
         danger: 'text-danger',
+    };
+
+    const clasesBoton = {
+        primary: 'btn-primary',
     };
 
     // Simulación de un usuario logeado
@@ -22,7 +26,18 @@ const App = () => {
     }
 
     // Array común y corriente
-    const frutas = ['🍏', '🍓', '🍌'];
+    const frutas = ['🍏', '🍓', '🍌', '🍒'];
+
+    // Manejo de eventos
+    const BotonClick = () => {
+        return (
+            <button
+                className={'btn ' + clasesBoton.primary}
+            >
+                Hacer click
+            </button>
+        );
+    };
 
     // Return del contenido de App
     return (
@@ -36,12 +51,13 @@ const App = () => {
                 {
                     // Se usa map ya que para que se pueda renderizar, es necesario el return, foreach no retorna
                     frutas.map((fruta, index) => {
-                        // Para el correcto renderizado de los elementos se debe ligar el elemento con un key único, como su index
-                        // En el caso de los arrays, no es recomendable si dicho array no es dinámico, porque los índices cambian
+                        // Cada li se debe identificar con un key único
                         return <li key={fruta}>{index + 1} - {fruta}</li>;
-                    }) // Como se está operando dentro de las llaves de renderizado, no se finaliza con ';'
+                    }) 
                 }
             </ul>
+
+            <BotonClick />
         </div>
     );
 };
