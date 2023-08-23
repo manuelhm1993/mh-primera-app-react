@@ -21,12 +21,25 @@ const App = () => {
         return <h2 className={clasesColor.danger}>¡Hasta luego!</h2>;
     }
 
+    // Array común y corriente
+    const frutas = ['🍏', '🍓', '🍌'];
+
     // Return del contenido de App
     return (
         <div className="container">
             <h1 className={clasesColor.primary}>{saludo}</h1>
 
             {(user) ? <SaludoBienvenida /> : <SaludoDespedida />}
+
+            {/* Iterar un array con react, se hace exactamente igual que en blade */}
+            <ul>
+                {
+                    // Se usa map ya que para que se pueda renderizar, es necesario el return, foreach no retorna
+                    frutas.map((fruta, i) => {
+                        return <li>{fruta}</li>;
+                    }) // Como se está operando dentro de las llaves de renderizado, no se finaliza con ';'
+                }
+            </ul>
         </div>
     );
 };
