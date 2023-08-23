@@ -28,11 +28,23 @@ const App = () => {
     // Array común y corriente
     const frutas = ['🍏', '🍓', '🍌', '🍒'];
 
-    // Manejo de eventos
+    // Manejo de eventos - función oyente 
+    const manejoClick = (e) => {
+        console.log('Diste click en el botón: ' + e.target.textContent);
+    };
+
+    // Manejo de eventos - componente - objeto fuente (siempre usar PascalCase)
     const BotonClick = () => {
         return (
             <button
-                className={'btn ' + clasesBoton.primary}
+                // Se puede usar todo tipo de lógica dentro de las llaves de renderizado, en este caso template strings
+                className={`btn ${clasesBoton.primary}`}
+
+                // Se usa camelCase para las propiedades y PascalCase para los componentes 
+                // Se usan funciones para manejar los eventos y se trabaja con on y se aplican las mismas reglas para
+                // Las llamadas, no usar paréntesis si la función no es anónima y en caso de necesitar parámetros, hacer
+                // Una función de flecha para pasarlos y así evitar que se autoinvoque
+                onClick={(e) => manejoClick(e)}
             >
                 Hacer click
             </button>
