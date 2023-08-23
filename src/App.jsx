@@ -1,3 +1,5 @@
+import Fruta from "./components/Fruta";
+
 const App = () => {
     const saludo = "Saludo desde constante. Dentro del componente principal.";
 
@@ -24,9 +26,6 @@ const App = () => {
     const SaludoDespedida = () => {
         return <h2 className={clasesColor.danger}>¡Hasta luego!</h2>;
     }
-
-    // Array común y corriente
-    const frutas = ['🍏', '🍓', '🍌', '🍒'];
 
     // Manejo de eventos - función oyente 
     const manejoClick = (e) => {
@@ -57,16 +56,7 @@ const App = () => {
             {/* Lógica condicional con el operador ternario */}
             {(user) ? <SaludoBienvenida /> : <SaludoDespedida />}
 
-            {/* Iterar un array con react, se hace exactamente igual que en blade */}
-            <ul>
-                {
-                    // Se usa map ya que para que se pueda renderizar, es necesario el return, foreach no retorna
-                    frutas.map((fruta, index) => {
-                        // Cada li se debe identificar con un key único
-                        return <li key={fruta}>{index + 1} - {fruta}</li>;
-                    }) 
-                }
-            </ul>
+            <Fruta />
 
             {/* Llamar a un componente que está a la escucha de un evento */}
             <BotonClick />
