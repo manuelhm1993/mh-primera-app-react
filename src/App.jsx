@@ -40,10 +40,7 @@ const App = () => {
                 // Se puede usar todo tipo de lógica dentro de las llaves de renderizado, en este caso template strings
                 className={`btn ${clasesBoton.primary}`}
 
-                // Se usa camelCase para las propiedades y PascalCase para los componentes 
-                // Se usan funciones para manejar los eventos y se trabaja con on y se aplican las mismas reglas para
-                // Las llamadas, no usar paréntesis si la función no es anónima y en caso de necesitar parámetros, hacer
-                // Una función de flecha para pasarlos y así evitar que se autoinvoque
+                // A la escucha del click
                 onClick={(e) => manejoClick(e)}
             >
                 Hacer click
@@ -54,8 +51,10 @@ const App = () => {
     // Return del contenido de App
     return (
         <div className="container">
+            {/* Atributos de clase y renderizado de variables */}
             <h1 className={clasesColor.primary}>{saludo}</h1>
 
+            {/* Lógica condicional con el operador ternario */}
             {(user) ? <SaludoBienvenida /> : <SaludoDespedida />}
 
             {/* Iterar un array con react, se hace exactamente igual que en blade */}
@@ -69,6 +68,7 @@ const App = () => {
                 }
             </ul>
 
+            {/* Llamar a un componente que está a la escucha de un evento */}
             <BotonClick />
         </div>
     );
