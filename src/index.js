@@ -4,8 +4,8 @@ import './index.css';
 // import App from './App'; // Componente principal que recibe el resto de componentes .js
 import reportWebVitals from './reportWebVitals';
 
-// Importaciones propias (como es un export default, se puede renombrar a voluntad)
-import AppJSX from './App.jsx'; //Se debe colocar la extensión si se usan .js y .jsx
+// Importaciones propias (como es un export default no es necesario usar la instrucción AS) Componente principal
+import AppJSX from './App.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
