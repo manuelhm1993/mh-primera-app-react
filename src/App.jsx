@@ -1,3 +1,4 @@
+// Llamar a los componentes
 import Fruta from "./components/Fruta";
 
 const App = () => {
@@ -56,6 +57,7 @@ const App = () => {
             {/* Lógica condicional con el operador ternario */}
             {(user) ? <SaludoBienvenida /> : <SaludoDespedida />}
 
+            {/* Listas y keys */}
             <Fruta />
 
             {/* Llamar a un componente que está a la escucha de un evento */}
